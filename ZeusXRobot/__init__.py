@@ -5,6 +5,7 @@ import time
 import spamwatch
 import telegram.ext as tg
 from aiohttp import ClientSession
+from Python_ARQ import ARQ
 from redis import StrictRedis
 from pyrogram import Client, errors
 
@@ -194,7 +195,7 @@ else:
 print("[ZeusXRobot]: Initializing AIOHTTP Session")
 aiohttpsession = ClientSession()    
       
-    
+arq = ARQ("https://thearq.tech", "YIECCC-NAJARO-OLLREW-SJSRIP-ARQ", aiohttpsession)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("KURUMIBOT", API_ID, API_HASH)
 pgram = Client("ZeusXRobot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
