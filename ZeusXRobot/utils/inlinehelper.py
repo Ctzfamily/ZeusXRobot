@@ -48,15 +48,15 @@ async def paste(content):
 async def inline_help_func(__HELP__):
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
-        InlineKeyboardButton("Get More Help.", url=f"t.me/GilbertAnimeBot?start=start"),
-        InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
+        InlineKeyboardButton("❗ More Help.", url=f"t.me/ZeusXRobot?start=start"),
+        InlineKeyboardButton("🔄 Go Inline", switch_inline_query_current_chat=""),
     )
     answerss = [
         InlineQueryResultArticle(
             title="Inline Commands",
             description="Help Related To Inline Usage.",
             input_message_content=InputTextMessageContent(__HELP__),
-            thumb_url="https://telegra.ph/file/d0819d9cd6f977ce1308d.jpg",
+            thumb_url="https://telegra.ph/file/93203499260184ff876b5.jpg",
             reply_markup=buttons,
         )
     ]
@@ -69,8 +69,8 @@ async def alive_function(answers):
     bot_state = "Dead" if not await app.get_me() else "Alive"
     # ubot_state = 'Dead' if not await app2.get_me() else 'Alive'
     buttons.add(
-        InlineKeyboardButton("Main Bot", url="https://t.me/GilbertAnimeBot"),
-        InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
+        InlineKeyboardButton("❗ Main Bot", url="https://t.me/ZeusXRobot"),
+        InlineKeyboardButton("🔄 Go Inline", switch_inline_query_current_chat=""),
     )
 
     msg = f"""
@@ -79,15 +79,14 @@ async def alive_function(answers):
 **UserBot:** `Alive`
 **Python:** `3.9`
 **Pyrogram:** `{pyrover}`
-**MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/GilbertAnimeBot) | [REPO](https://github.com/AASFCYBERKING/GilbertAnimeBot)
+**Profiles:** [BOT](t.me/ZeusXRobot) | [REPO](https://github.com/Ctzfamily/VegetaRobot)
 """
     answers.append(
         InlineQueryResultArticle(
             title="Alive",
             description="Check Bot's Stats",
-            thumb_url="https://telegra.ph/file/490ba795491922a62bb3a.jpg",
+            thumb_url="https://telegra.ph/file/93203499260184ff876b5.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
